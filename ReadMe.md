@@ -35,19 +35,19 @@ pool control centre,该数据管理中心便是位于引擎内部，全权有引
 
       通过映射两份共享内存，将内存的信息重定位到共享内存中，来达到信息交互。其中Stream Control位于引擎内存，无法通过三方插件进行干预，raw pool 表示是共享内存，所有的数据流都将进入Raw Pool中实现交互，并且调度由Stream Control组件控制。实际上两份的共享内存池都会映射到client和server中，stream control组件只是进行必要的维护和调度管理。
 
-![Control.png](.\img\Control.png)
+![Control.png](./img/Control.png)
 
-![内存池交互图.png](.\img\内存池交互图.png)
+![内存池交互图.png](./img/内存池交互图.png)
 
 内存管理
 
     内存管理是其中的很重要的组成部分。该部分决定了数据块的使用和回收，从图可以看出，空闲块和使用块之间是没有本质上区别的，根本区别在于其位于那条链表上，链表之间是可以相互转换的。
 
-![内存管理图.drawio.png](.\img\内存管理图.drawio.png)
+![内存管理图.drawio.png](./img/内存管理图.drawio.png)
 
 ### 通信图
 
-![跨进程通信.drawio.png](.\img\跨进程通信.drawio.png)
+![跨进程通信.drawio.png](./img/跨进程通信.drawio.png)
 
 具体的进程通信参考结构体 struct control_symbol;
 
