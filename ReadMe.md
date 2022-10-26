@@ -51,6 +51,9 @@ pool control centre,该数据管理中心便是位于引擎内部，全权有引
 
 具体的进程通信参考结构体 struct control_symbol;
 
+接口图
+![劫持层设计.drawio.png](./img/劫持层设计.drawio.png)
+
 **3.3** **结构体解析**
 
 **__CoreDispatchCenter** 结构体
